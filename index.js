@@ -1,5 +1,5 @@
 function fetchData(place) {
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${place}&aqi=no`)
+  fetch(`http://api.weatherapi.com/v1/current.json?key=${NEWNAME}&q=${place}&aqi=no`)
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
