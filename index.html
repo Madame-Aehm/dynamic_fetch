@@ -12,21 +12,22 @@
     <form>
       <label for="input">Choose a city</label>
       <input id="input" />
+      <button type="submit">Get Weather!</button>
     </form>
     
-    <!-- <h1 id="loading" class="hide">Loading....</h1> -->
+    <h1 id="loading" class="hide">Loading....</h1>
 
-    <!-- <div id="error-div" class="hide">
+    <div id="error-div" class="hide" >
       <h1>Something went wrong 🙃</h1>
-      <p></p>
-    </div> -->
+      <p id="message"></p>
+    </div>
 
-    <div id="data-container" class="container">
+    <div id="data-container" class="container hide">
       <div>
         <h1>Weather in <span id="city-name"></span>: <span id="condition"></span><img /></h1>
       </div>
       
-      <table>
+      <table id="table" class="hide">
         <thead>
           <tr>
             <th>Temp</th>
@@ -45,6 +46,6 @@
   </div>
 
 <script src="secret.js"></script>
-
+<script src="index.js"></script>
 </body>
 </html>
