@@ -1,5 +1,8 @@
+import apiKey from "./secret.js";
+
+
 function fetchData(place) {
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${NEWNAME}&q=${place}&aqi=no`)
+  fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}&aqi=no`)
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
@@ -30,15 +33,6 @@ function buildHeader (data) {
   const icon = document.querySelector("img");
   icon.src = data.current.condition.icon;
   icon.alt = data.current.condition.text;
-}
-
-function buildHeader (data) {
-  const cityName = document.getElementById("city-name");
-  cityName.innerHTML = data.location.name + ", " + data.location.country;
-  const condition = document.getElementById("condition");
-  condition.innerHTML = data.current.condition.text;
-  const icon = document.querySelector("img");
-  icon.src = data.current.condition.icon;
 }
 
 function buildTable(weather) {
