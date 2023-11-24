@@ -2,7 +2,7 @@ import apiKey from "./secret.js";
 
 
 function fetchData(place) {
-  fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}&aqi=no`)
+  fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${place}&aqi=no`)
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
