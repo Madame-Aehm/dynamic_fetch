@@ -1,4 +1,4 @@
-import apiKey from "./secret.js";
+// import apiKey from "./secret.js";
 
 
 function fetchData(place) {
